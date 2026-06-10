@@ -50,4 +50,4 @@ yarn-error.log*
 Thumbs.db
 
 # Optional: Ignore large model files if they exceed GitHub's 100MB limit
-# backend/sam_detection.pt
+backend/*.pt
