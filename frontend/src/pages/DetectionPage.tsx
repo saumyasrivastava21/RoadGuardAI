@@ -62,8 +62,10 @@ export const DetectionPage: React.FC = () => {
     const formData = new FormData();
     formData.append('file', selectedFile);
 
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+
     try {
-      const response = await fetch('http://127.0.0.1:8000/predict', {
+      const response = await fetch(`${apiUrl}/predict`, {
         method: 'POST',
         body: formData,
       });
